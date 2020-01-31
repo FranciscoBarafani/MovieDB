@@ -4,7 +4,6 @@ import { Layout } from "antd";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //Importacion de Componentes
 import MenuTop from "./components/MenuTop";
-
 //Pages
 import Home from "./pages/home";
 import Error404 from "./pages/error404";
@@ -19,7 +18,7 @@ export default function App() {
   return (
     <Layout>
       <Router>
-        <Header>
+        <Header style={{ zIndex: 1 }}>
           <MenuTop />
         </Header>
         <Content>

@@ -1,8 +1,8 @@
 import React from "react";
+import "./MovieList.scss";
 import { List, Avatar, Button } from "antd";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
-import "./MovieList.scss";
 
 export default function MovieList(props) {
   const { movies, title } = props;

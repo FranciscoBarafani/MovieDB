@@ -6,6 +6,10 @@ import Loading from "../Loading";
 
 export default function SliderMovies(props) {
   const { movies } = props;
+
+  //Si el estado de movies sigue cargando muestra el componente Loading
+  //Una vez que carga renderiza el carousel
+  //movies es un objeto JSON pasado como props desde home
   if (movies.loading || !movies.result) {
     return <Loading />;
   } else {
