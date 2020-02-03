@@ -20,7 +20,7 @@ export default function MenuTop() {
           <Link to="/">Home</Link>
         </Menu.Item>
         <Menu.Item key="2">
-          <Link to="/new">Ultimos Lanzamientos</Link>
+          <Link to="/new-movies">Ultimos Lanzamientos</Link>
         </Menu.Item>
         <Menu.Item key="3">
           <Link to="/popular">Populares</Link>
