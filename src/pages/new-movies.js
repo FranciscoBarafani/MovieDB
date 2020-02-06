@@ -4,6 +4,7 @@ import { URL_API, API } from "../utils/constants";
 import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 import MovieCatalog from "../components/MovieCatalog";
+import Pagination from "../components/Pagination";
 
 export default function NewMovies() {
   const [movieList, setMovieList] = useState([]);
@@ -19,6 +20,10 @@ export default function NewMovies() {
     })();
   }, [page]);
 
+  const onChangePage = page => {
+    setPage(page);
+  };
+
   return (
     <Row>
       <Col span={24} style={{ textAlign: "center", marginTop: 25 }}>
@@ -27,9 +32,18 @@ export default function NewMovies() {
         </h1>
       </Col>
       {movieList.results ? (
-        <Col span={24}>
-          <MovieCatalog movies={movieList} />
-        </Col>
+        <Row>
+          <Col span={24}>
+            <MovieCatalog movies={movieList} />
+          </Col>
+          <Col span={24}>
+            <Pagination
+              currentPage={movieList.page}
+              totalItems={movieList.total_results}
+              onChangePage={onChangePage}
+            />
+          </Col>
+        </Row>
       ) : (
         <Col span={24}>
           <Loading />

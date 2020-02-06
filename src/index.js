@@ -4,6 +4,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 //Importamos el css de AntDesign
 import "antd/dist/antd.css"; // or 'antd/dist/antd.less'
+import "rc-pagination/assets/index.css";
 import "./index.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
